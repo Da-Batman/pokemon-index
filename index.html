@@ -42,7 +42,7 @@ h1{
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
     padding:20px;
 }
@@ -59,8 +59,14 @@ h1{
     transform:scale(1.03);
 }
 
+.card img{
+    width:120px;
+    height:120px;
+}
+
 .number{
     color:#cccccc;
+    margin-top:5px;
 }
 
 .name{
@@ -71,10 +77,7 @@ h1{
 
 .type{
     color:#ffcb05;
-}
-
-img{
-    width:120px;
+    margin-top:5px;
 }
 
 </style>
@@ -94,35 +97,34 @@ img{
         onkeyup="searchPokemon()">
 </div>
 
-<div class="cards" id="pokemonContainer">
+<div class="cards">
 
-<div class="card">
-    <img src=aw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
-    <div class="number">#001</div>
-    <div class="name">Bulbasaur</div>
-    <div class="type">Grass / Poison</div>
-</div>
+    <div class="card">
+        <img src="https://raw.githubusercontent.comprites/master/sprites/pokemon/1.png
+        <div class="number">#001</div>
+        <div class="name">Bulbasaur</div>
+        <div class="type">Grass / Poison</div>
+    </div>
 
-<div class="card">
-    https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png
-    <div class="number">#004</div>
-    <div class="name">Charmander</div>
-    <div class="type">Fire</div>
-</div>
+    <div class="card">
+        https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png
+        <div class="number">#004</div>
+        <div class="name">Charmander</div>
+        <div class="type">Fire</div>
+    </div>
 
-<div class="card">
-    <img src=aw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png
-    <div class="number">#007</div>
-    <div class="name">Squirtle</div>
-    <div class="type">Water</div>
-</div>
+    <div class="card">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.  <div class="number">#007</div>
+        <div class="name">Squirtle</div>
+        <div class="type">Water</div>
+    </div>
 
-<div class="card">
-    <img src="https://raw.githubusercontent.com/rites/master/sprites/pokemon/25.png
-    <div class="number">#025</div>
-    <div class="name">Pikachu</div>
-    <div class="type">Electric</div>
-</div>
+    <div class="card">
+        https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png
+        <div class="number">#025</div>
+        <div class="name">Pikachu</div>
+        <div class="type">Electric</div>
+    </div>
 
 </div>
 
@@ -138,7 +140,7 @@ document.getElementById("searchBox")
 let cards =
 document.getElementsByClassName("card");
 
-for (let i=0; i<cards.length; i++) {
+for (let i = 0; i < cards.length; i++) {
 
 let name =
 cards[i]
@@ -146,11 +148,15 @@ cards[i]
 .innerText
 .toUpperCase();
 
-if(name.indexOf(input) > -1){
-cards[i].style.display="";
+if (name.indexOf(input) > -1) {
+
+cards[i].style.display = "";
+
 }
-else{
-cards[i].style.display="none";
+else {
+
+cards[i].style.display = "none";
+
 }
 
 }
