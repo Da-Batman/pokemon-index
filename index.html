@@ -1,19 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Pokemon Index</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#161b2f;
+    color:white;
+}
+
+header{
+    background:#202744;
+    padding:20px;
+    text-align:center;
+}
+
+h1{
+    margin:0;
+    color:#ffcb05;
+}
+
+.search-container{
+    padding:20px;
+    text-align:center;
+}
+
+#searchBox{
+    width:80%;
+    max-width:400px;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    font-size:16px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:#252c4f;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+.number{
+    color:#cccccc;
+}
+
+.name{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.type{
+    color:#ffcb05;
+}
+
+img{
+    width:120px;
+}
+
+</style>
 </head>
 
-<body style="font-family: Arial; text-align:center; background:#1e1e2f; color:white; padding-top:100px;">
+<body>
 
-<h1 style="color:#ffcb05;">Pokemon Index</h1>
+<header>
+    <h1>Pokemon Index</h1>
+</header>
 
-<p>Future home of the Pokemon App.</p>
+<div class="search-container">
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search Pokemon..."
+        onkeyup="searchPokemon()">
+</div>
 
-<button onclick="alert('App is working!')" 
-style="padding:15px 25px; font-size:18px; background:#2a75bb; color:white; border:none; border-radius:10px;">
-Test Button
-</button>
+<div class="cards" id="pokemonContainer">
+
+<div class="card">
+    <img src=aw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
+    <div class="number">#001</div>
+    <div class="name">Bulbasaur</div>
+    <div class="type">Grass / Poison</div>
+</div>
+
+<div class="card">
+    https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png
+    <div class="number">#004</div>
+    <div class="name">Charmander</div>
+    <div class="type">Fire</div>
+</div>
+
+<div class="card">
+    <img src=aw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png
+    <div class="number">#007</div>
+    <div class="name">Squirtle</div>
+    <div class="type">Water</div>
+</div>
+
+<div class="card">
+    <img src="https://raw.githubusercontent.com/rites/master/sprites/pokemon/25.png
+    <div class="number">#025</div>
+    <div class="name">Pikachu</div>
+    <div class="type">Electric</div>
+</div>
+
+</div>
+
+<script>
+
+function searchPokemon() {
+
+let input =
+document.getElementById("searchBox")
+.value
+.toUpperCase();
+
+let cards =
+document.getElementsByClassName("card");
+
+for (let i=0; i<cards.length; i++) {
+
+let name =
+cards[i]
+.getElementsByClassName("name")[0]
+.innerText
+.toUpperCase();
+
+if(name.indexOf(input) > -1){
+cards[i].style.display="";
+}
+else{
+cards[i].style.display="none";
+}
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
