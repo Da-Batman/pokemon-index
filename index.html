@@ -136,4 +136,55 @@ h1{
         alt="Squirtle">
 
         <div class="number">#007div>
-        <div
+        <div class="type">Water</div>
+
+    </div>
+
+    <div class="card">
+
+        <img
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png"
+        alt="Pikachu">
+
+        <div class="number">#025</v>
+        <div class="type">Electric</div>
+
+    </div>
+
+</div>
+
+<script>
+
+function searchPokemon() {
+
+    let input =
+    document.getElementById("searchBox")
+    .value
+    .toUpperCase();
+
+    let cards =
+    document.getElementsByClassName("card");
+
+    for(let i = 0; i < cards.length; i++) {
+
+        let name =
+        cards[i]
+        .getElementsByClassName("name")[0]
+        .innerText
+        .toUpperCase();
+
+        if(name.indexOf(input) > -1) {
+            cards[i].style.display = "";
+        }
+        else {
+            cards[i].style.display = "none";
+        }
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
