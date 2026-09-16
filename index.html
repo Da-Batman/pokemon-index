@@ -64,8 +64,8 @@ h1{
 }
 
 .card img{
-    width:120px;
-    height:120px;
+    width:150px;
+    height:150px;
     object-fit:contain;
 }
 
@@ -96,11 +96,13 @@ h1{
 </header>
 
 <div class="search-container">
+
     <input
         type="text"
         id="searchBox"
         placeholder="Search Pokemon..."
         onkeyup="searchPokemon()">
+
 </div>
 
 <div class="cards">
@@ -119,11 +121,11 @@ h1{
     <div class="card">
 
         <img
-        src="https://assets.pcms2/img/pokedex/detail/004.png
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+        alt="Charmander">
 
         <div class="number">#004</div>
-        <div class="name">Charmander</div>
-        <div class="type">Fire</div>
+      <div class="type">Fire</div>
 
     </div>
 
@@ -133,56 +135,5 @@ h1{
         src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
         alt="Squirtle">
 
-        <div class="number">#007</v>
-        <div class="type">Water</div>
-
-    </div>
-
-    <div class="card">
-
-        <img
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png"
-        alt="Pikachu">
-
-        <div class="e">Pikachu</div>
-        <div class="type">Electric</div>
-
-    </div>
-
-</div>
-
-<script>
-
-function searchPokemon() {
-
-let input =
-document.getElementById("searchBox")
-.value
-.toUpperCase();
-
-let cards =
-document.getElementsByClassName("card");
-
-for(let i=0;i<cards.length;i++){
-
-let name =
-cards[i]
-.getElementsByClassName("name")[0]
-.innerText
-.toUpperCase();
-
-if(name.indexOf(input)>-1){
-cards[i].style.display="";
-}
-else{
-cards[i].style.display="none";
-}
-
-}
-
-}
-
-</script>
-
-</body>
-</html>
+        <div class="number">#007div>
+        <div
