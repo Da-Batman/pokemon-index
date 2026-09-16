@@ -7,14 +7,13 @@
 <title>Pokemon Index</title>
 
 <style>
-
 *{
     box-sizing:border-box;
 }
 
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#161b2f;
     color:white;
 }
@@ -56,11 +55,6 @@ h1{
     border-radius:16px;
     padding:20px;
     text-align:center;
-    transition:.2s;
-}
-
-.card:hover{
-    transform:translateY(-4px);
 }
 
 .card img{
@@ -70,7 +64,7 @@ h1{
 }
 
 .number{
-    color:#cfcfcf;
+    color:#cccccc;
     margin-top:10px;
 }
 
@@ -82,74 +76,55 @@ h1{
 
 .type{
     color:#ffcb05;
-    margin-top:8px;
     font-weight:bold;
+    margin-top:5px;
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Pokemon Index</h1>
+<h1>Pokemon Index</h1>
 </header>
 
 <div class="search-container">
-
-    <input
-        type="text"
-        id="searchBox"
-        placeholder="Search Pokemon..."
-        onkeyup="searchPokemon()">
-
+<input
+type="text"
+id="searchBox"
+placeholder="Search Pokemon..."
+onkeyup="searchPokemon()">
 </div>
 
 <div class="cards">
 
-    <div class="card">
+<div class="card">
+<img src="https://assets.pokemon.com/assetspokedex/detail/001.png
+<div class="number">#001</div>
+<div class="name">Bulbasaur</div>
+<div class="type">Grass / Poison</div>
+</div>
 
-        <img
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png"
-        alt="Bulbasaur">
+<div class="card">
+<img src="w.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png
+<div class="number">#004</div>
+<div class="name">Charmander</div>
+<div class="type">Fire</div>
+</div>
 
-        <div class="number">#001</div>
-        iv class="type">Grass / Poison</div>
+<div class="card">
+<img src="https://assets.pokemon.com/assetspokedex/detail/007.png
+<div class="number">#007</div>
+<div class="name">Squirtle</div>
+<div class="type">Water</div>
+</div>
 
-    </div>
-
-    <div class="card">
-
-        <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
-        alt="Charmander">
-
-        <div class="number">#004</div>
-      <div class="type">Fire</div>
-
-    </div>
-
-    <div class="card">
-
-        <img
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
-        alt="Squirtle">
-
-        <div class="number">#007div>
-        <div class="type">Water</div>
-
-    </div>
-
-    <div class="card">
-
-        <img
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png"
-        alt="Pikachu">
-
-        <div class="number">#025</v>
-        <div class="type">Electric</div>
-
-    </div>
+<div class="card">
+<img src="https://assets.p/assets/cms2/img/pokedex/detail/025.png
+<div class="number">#025</div>
+<div class="name">Pikachu</div>
+<div class="type">Electric</div>
+</div>
 
 </div>
 
@@ -157,30 +132,30 @@ h1{
 
 function searchPokemon() {
 
-    let input =
-    document.getElementById("searchBox")
-    .value
-    .toUpperCase();
+let input =
+document.getElementById("searchBox")
+.value
+.toUpperCase();
 
-    let cards =
-    document.getElementsByClassName("card");
+let cards =
+document.getElementsByClassName("card");
 
-    for(let i = 0; i < cards.length; i++) {
+for(let i = 0; i < cards.length; i++){
 
-        let name =
-        cards[i]
-        .getElementsByClassName("name")[0]
-        .innerText
-        .toUpperCase();
+let name =
+cards[i]
+.getElementsByClassName("name")[0]
+.innerText
+.toUpperCase();
 
-        if(name.indexOf(input) > -1) {
-            cards[i].style.display = "";
-        }
-        else {
-            cards[i].style.display = "none";
-        }
+if(name.indexOf(input) > -1){
+cards[i].style.display="";
+}
+else{
+cards[i].style.display="none";
+}
 
-    }
+}
 
 }
 
